@@ -10,7 +10,7 @@ Welcome to SparCa's documentation!
 .. toctree::
    :maxdepth: 2
 
-   get_started.md <Get Started>
+   get_started.md
 
 
 
