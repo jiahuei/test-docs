@@ -18,14 +18,12 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
-from sparse_caption.version import __version__  # noqa: E402
-
 project = "SparCa"
 copyright = "2021, CiSIPLab Universiti Malaya, Jia-Huei Tan"
 author = "CiSIPLab Universiti Malaya, Jia-Huei Tan"
 
 # The full version, including alpha/beta/rc tags
-release = __version__
+release = "0.1.0"
 
 
 # -- General configuration ---------------------------------------------------
