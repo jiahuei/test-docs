@@ -35,6 +35,7 @@ release = "0.1.0"
 extensions = [
     # "sphinx.ext.autodoc",  # Core library for html generation from docstrings
     # "sphinx.ext.napoleon",  # Support for NumPy and Google style docstrings
+    "myst_parser",
     "sphinx_rtd_theme",
 ]
 
