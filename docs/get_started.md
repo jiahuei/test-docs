@@ -1,6 +1,6 @@
 # Get Started
 
-# Requirements
+## Requirements
 
 The main requirements for `sparse_caption` are as follows:
 
@@ -15,10 +15,27 @@ The full list of required packages can be found `requirements_base.txt` and `req
 The exact dependency versions that are tested can be found in `requirements_dev_base.txt` and `requirements_dev.txt`.
 ```
 
+```{admonition} Possible {pycocotools} installation issues
+* One might run into issues related to `numpy` or `cython` when importing `pycocotools`.
+* To resolve it, either:
+    * Install `numpy` and `cython` prior to installing `pycocotools`
+    * Maybe try `pycocotools-fix` instead
+* This issue may lead to GitHub CI failing, if a different `numpy` version is reinstalled after `pycocotools` is built
+```
 
-# Installation and Setup
+```{admonition}
+:option1: Possible `pycocotools` installation issues
 
-## Docker
+* One might run into issues related to `numpy` or `cython` when importing `pycocotools`.
+* To resolve it, either:
+    * Install `numpy` and `cython` prior to installing `pycocotools`
+    * Maybe try `pycocotools-fix` instead
+* This issue may lead to GitHub CI failing, if a different `numpy` version is reinstalled after `pycocotools` is built
+```
+
+## Installation and Setup
+
+### Docker
 Setup using Docker is the most convenient.
 
 1. Run `docker build -t <YOUR_TAG> -f Dockerfile .` to build the image.
@@ -35,17 +52,14 @@ Setup using Docker is the most convenient.
 3. In the container, run `bash /workspace/scripts/dataset/setup.sh` to perform dataset download, pre-processing, and feature extraction.
 4. Done.
 
-## Anaconda
+### Anaconda
 
 ```{admonition} Windows
 1. On Windows, you might need to install "Microsoft C++ Build Tools" in order to build `pycocotools`, 
 by [downloading from this link](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
 2. Tick the options as shown:
-    .. image:: win-build-tools.png
-    :scale: 50 %
-    :alt: win-build-tools
-    :align: left
+    ![win-build-tools](win-build-tools.png)
 ```
 
 1. These commands should install the required packages:
@@ -59,7 +73,7 @@ by [downloading from this link](https://visualstudio.microsoft.com/visual-cpp-bu
 
     # For dev, optional
     conda install pytest
-    conda install -c conda-forge black doc8 sphinx sphinx-autobuild sphinx_rtd_theme
+    conda install -c conda-forge black doc8 myst-parser sphinx sphinx-autobuild sphinx_rtd_theme
     ```
 2. Install Java 8.
 3. Done.
